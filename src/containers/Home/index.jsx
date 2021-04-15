@@ -4,7 +4,7 @@
 
 import React from 'react';
 // $FlowFixMe
-import Carousel from 'gd-core__old/app/components/Carousel';
+import Carousel from '@geostreams/core__old/app/components/Carousel';
 import styles from './home.css';
 import mainStyles from '../../styles/old_mainStyle.css';
 import carouselImages from '../../images/carousel_images';

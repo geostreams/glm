@@ -27,53 +27,51 @@ type Props = {
     }
 };
 
-const useStyles = makeStyles(() =>{
-    return ({
-        mainHeader: {
-            backgroundImage: 'linear-gradient(to bottom, #054455, #467A9E)',
-            textDecoration: 'none',
-            position: 'static',
-            minHeight: HEADERS_HEIGHT,
-            height: HEADERS_HEIGHT
-        },
-        headerText: {
-            position: 'relative',
-            left: '-25px'
-        },
-        logo: {
-            display: 'flex',
-            margin: '10px 0 0 10px',
-            height: '90px',
-            zIndex: 32
-        },
-        tabsRoot: {
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: '36px'
-        },
-        tabsIndicator: {
-            backgroundColor: '#fff'
-        },
-        tabRoot: {
-            fontSize: '1.1em',
-            lineHeight: '36px',
-            fontWeight: 700,
-            color: '#fff',
-            padding: 0,
-            minHeight: '36px'
-        },
-        dropdownIcon: {
-            display: 'flex',
-            alignItems: 'center'
-        },
-        dropDownItem: {
-            color: 'black',
-            fontWeight: 700,
-            padding: '10px',
-            fontSize: '1.1em'
-        }
-    });
-});
+const useStyles = makeStyles(() =>({
+    mainHeader: {
+        backgroundImage: 'linear-gradient(to bottom, #054455, #467A9E)',
+        textDecoration: 'none',
+        position: 'static',
+        minHeight: HEADERS_HEIGHT,
+        height: HEADERS_HEIGHT
+    },
+    headerText: {
+        position: 'relative',
+        left: '-25px'
+    },
+    logo: {
+        display: 'flex',
+        margin: '10px 0 0 10px',
+        height: '90px',
+        zIndex: 32
+    },
+    tabsRoot: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '36px'
+    },
+    tabsIndicator: {
+        backgroundColor: '#fff'
+    },
+    tabRoot: {
+        fontSize: '1.1em',
+        lineHeight: '36px',
+        fontWeight: 700,
+        color: '#fff',
+        padding: 0,
+        minHeight: '36px'
+    },
+    dropdownIcon: {
+        display: 'flex',
+        alignItems: 'center'
+    },
+    dropDownItem: {
+        color: 'black',
+        fontWeight: 700,
+        padding: '10px',
+        fontSize: '1.1em'
+    }
+}));
 
 const Header = ({ location }: Props) => {
     const dropDownRef = React.useRef(null);

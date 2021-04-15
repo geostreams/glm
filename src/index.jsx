@@ -6,17 +6,17 @@ const __old_config = require('./oldConfig')
 window.configruntime = __old_config
 
 // $FlowFixMe
-import { addEndpoints, fetchSensors as __old_fetchSensors } from 'gd-core__old/app/actions'
+import { addEndpoints, fetchSensors as __old_fetchSensors } from '@geostreams/core__old/app/actions'
 
-import render from 'gd-core/src/render';
-import { updateGeoStreamingConfig } from 'gd-geostreaming/src/actions/config';
-import { fetchParameters } from 'gd-geostreaming/src/actions/parameters';
-import { fetchSensors } from 'gd-geostreaming/src/actions/sensors';
+import render from '@geostreams/core/src/render';
+import { updateGeoStreamingConfig } from '@geostreams/geostreaming/src/actions/config';
+import { fetchParameters } from '@geostreams/geostreaming/src/actions/parameters';
+import { fetchSensors } from '@geostreams/geostreaming/src/actions/sensors';
 
 // $FlowFixMe
-import 'gd-glm__old/app/styles/mainStyle.css';
+import '@geostreams/glm__old/app/styles/mainStyle.css';
 // $FlowFixMe
-import 'gd-glm__old/app/styles_custom/react-mdc-web.css';
+import '@geostreams/glm__old/app/styles_custom/react-mdc-web.css';
 import 'material-components-web/dist/material-components-web.min.css';
 
 import config from './config';

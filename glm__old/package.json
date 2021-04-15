@@ -1,5 +1,5 @@
 {
-  "name": "gd-glm__old",
+  "name": "@geostreams/glm__old",
   "version": "3.6.0",
   "description": "Geodashboard using React.js to visualize data from Geostreaming API.",
   "main": "main.jsx",
@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "es6-promise": "^4.2.6",
-    "gd-core__old": "file:../gd-core__old",
+    "@geostreams/core__old": "^3.6.1",
     "isomorphic-fetch": "^2.2.1",
     "moment": "2.24.0",
     "openlayers": "3.20.1",

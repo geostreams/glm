@@ -5,7 +5,7 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { connect } from 'react-redux';
 // $FlowFixMe
-import { getSourceInfo } from 'gd-core__old/app/utils/getConfig';
+import { getSourceInfo } from '@geostreams/core__old/app/utils/getConfig';
 import styles from './about.css';
 import AboutTitle from './AboutTitle';
 import AboutData from './AboutData';

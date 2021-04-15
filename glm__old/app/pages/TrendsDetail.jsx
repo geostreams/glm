@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import TrendsDetailRight from 'gd-core__old/app/containers/TrendsDetailRight';
+import TrendsDetailRight from '@geostreams/core__old/app/containers/TrendsDetailRight';
 
 import RegionMiniMap from '../containers/RegionMiniMap';
 import TrendsRegionDetails from '../containers/TrendsRegionDetails';
