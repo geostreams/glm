@@ -19,21 +19,20 @@ import {
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import LogoApp from '../../images/logo.png';
 
-export const HEADERS_HEIGHT = 132;
-
 type Props = {
     location: {
         pathname: string
     }
 };
 
-const useStyles = makeStyles(() =>({
+const useStyles = makeStyles((theme) =>({
     mainHeader: {
         backgroundImage: 'linear-gradient(to bottom, #054455, #467A9E)',
         textDecoration: 'none',
-        position: 'static',
-        minHeight: HEADERS_HEIGHT,
-        height: HEADERS_HEIGHT
+        position: 'relative',
+        minHeight: theme.header.height,
+        height: theme.header.height,
+        zIndex: theme.zIndex.drawer + 1
     },
     headerText: {
         position: 'relative',

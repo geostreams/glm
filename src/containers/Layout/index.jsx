@@ -10,7 +10,7 @@ import Footer from './Footer';
 import Header from './Header';
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme=>({
     scrim: {
         position: 'absolute',
         background: 'rgba(0, 0, 0, 0.5)',
@@ -18,9 +18,10 @@ const useStyles = makeStyles({
     },
     main: {
         position: 'absolute',
-        width: '100%'
+        width: '100vw',
+        height: `calc(100vh - ${theme.header.height}px)`
     }
-});
+}));
 
 type Props = {
     isLoading: boolean;

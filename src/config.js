@@ -1,5 +1,11 @@
 export default {
     map: {
+        zoom: 6,
+        minZoom: 5.5,
+        maxZoom: 10,
+        popupZoom: 10,
+        mapTileURL: 'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
+        center: [-9182145.01, 5629749.04],
         clusterExpandCountThreshold: 10,
         clusterExpandZoomThreshold: 12
     },

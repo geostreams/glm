@@ -29,6 +29,9 @@ const theme = createMuiTheme({
             margin: '0 0 0 2em',
             lineHeight: '22px'
         }
+    },
+    header: {
+        height: 132
     }
 });
 
