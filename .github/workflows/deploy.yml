@@ -51,14 +51,12 @@ jobs:
           echo -n > .env
           if [ "$TARGET_BRANCH" == "main" ]; then
             TAGS="${HUB_REPO}/${PROJECT_NAME}:latest,${HUB_REPO}/${PROJECT_NAME}:${VERSION}"
-            echo "HOST=${{ matrix.prod-host }}" >> $GITHUB_ENV
           elif [ "$TARGET_BRANCH" == "develop" ]; then
             TAGS="${HUB_REPO}/${PROJECT_NAME}:develop,${HUB_REPO}/${PROJECT_NAME}:sha-${GITHUB_SHA::8}"
-            echo "HOST=${{ matrix.dev-host }}" >> $GITHUB_ENV
           fi
+          echo "HOST=${{ matrix['host'] }}" >> $GITHUB_ENV
           echo "::set-output name=version::${VERSION}"
           echo "::set-output name=tags::${TAGS}"
-          echo "::set-output name=buildargs::PROJECT_NAME=$PROJECT_NAME"
           echo "::set-output name=created::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -87,12 +85,10 @@ jobs:
           context: .
           file: ./Dockerfile
           tags: ${{ steps.info.outputs.tags }}
-          build-args: |
-            ${{ steps.info.outputs.buildargs }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
           labels: |
-            image.title=${{ matrix.description }}
+            image.title=${{ matrix['description'] }}
             image.version=${{ steps.info.outputs.version }}
             image.created=${{ steps.info.outputs.created }}
             image.revision=${{ github.sha }}
