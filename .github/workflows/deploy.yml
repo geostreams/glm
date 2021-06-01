@@ -92,7 +92,7 @@ jobs:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
           labels: |
-            image.title= ${{ matrix.description }}
+            image.title=${{ matrix.description }}
             image.version=${{ steps.info.outputs.version }}
             image.created=${{ steps.info.outputs.created }}
             image.revision=${{ github.sha }}
