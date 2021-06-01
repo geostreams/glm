@@ -46,6 +46,7 @@ jobs:
           HUB_REPO: hub.ncsa.illinois.edu/geostreams
           GITHUB_SHA: ${{ github.sha }}
         run: |
+          echo ${GITHUB_REF}
           TARGET_BRANCH=${GITHUB_REF#refs/*/}
           VERSION="$(grep version package.json | awk -F \" '{print $4}')"
           echo -n > .env
