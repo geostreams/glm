@@ -165,10 +165,8 @@ function About (props: Object) {
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        sources: state.sensors.sources
-    };
-};
+const mapStateToProps = (state) => ({
+    sources: state.sensors.sources
+});
 
 export default connect(mapStateToProps)(About);

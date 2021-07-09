@@ -1,12 +1,11 @@
 // @flow
 import hocs from '@geostreams/core/src/utils/hocs';
 import Explore from '@geostreams/geostreaming/src/containers/Explore';
+import Search from '@geostreams/geostreaming/src/containers/Search';
 import SensorDetail from '@geostreams/geostreaming/src/containers/Sensor/Detail';
 import Trends from '@geostreams/geostreaming/src/containers/Trends';
 import TrendDetail from '@geostreams/geostreaming/src/containers/Trends/Detail';
 
-// $FlowFixMe
-import __old_Search from '@geostreams/glm__old/app/pages/Search';
 // $FlowFixMe
 import __old_TrendsStation from '@geostreams/glm__old/app/pages/TrendsSensor';
 
@@ -19,7 +18,7 @@ const routes = {
     '/about': { exact: true, component: hocs.withLayout(GLMLayout, About, { hasFooter: true }) },
     '/explore/:stations': { component: hocs.withLayout(GLMLayout, Explore), exact: true },
     '/:parent(explore|trendsstations)/detail/location/:name/:category': { component: hocs.withLayout(GLMLayout, SensorDetail) },
-    '/search': { component: hocs.withLayout(GLMLayout, __old_Search) },
+    '/search': { component: hocs.withLayout(GLMLayout, Search) },
     '/trendsstations': { component: hocs.withLayout(GLMLayout, __old_TrendsStation), exact: true },
     '/trends/:category(stations|regions)': { component: hocs.withLayout(GLMLayout, Trends), exact: true },
     '/trends/regions/:region/:parameter/:season': { component: hocs.withLayout(GLMLayout, TrendDetail), exact: true }
