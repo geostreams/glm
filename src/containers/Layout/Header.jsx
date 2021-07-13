@@ -97,7 +97,7 @@ const Header = ({ location }: Props) => {
                     indicator: classes.tabsIndicator
                 }}
                 centered
-                value={activeTab.search(/^(trendsstation|trendsregion)/) === 0 ? 'trends' : activeTab}
+                value={activeTab.search(/^(trendsstations|trends\/regions)/) === 0 ? 'trends' : activeTab}
             >
                 <Tab
                     className={classes.tabRoot}
@@ -151,7 +151,7 @@ const Header = ({ location }: Props) => {
                 onClose={() => handleDropDown(false)}
             >
                 <ClickAwayListener onClickAway={() => handleDropDown(false)}>
-                        
+
                     <Paper square>
                         <MenuItem
                             classes={{
@@ -160,13 +160,13 @@ const Header = ({ location }: Props) => {
                             component={Link}
                             to="/trendsstations">
                         TRENDS STATIONS
-                        </MenuItem> 
+                        </MenuItem>
                         <MenuItem
                             classes={{
                                 root: classes.dropDownItem
                             }}
                             component={Link}
-                            to="/trendsregions">
+                            to="/trends/regions">
                         TRENDS REGIONS
                         </MenuItem>
                     </Paper>

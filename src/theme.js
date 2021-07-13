@@ -1,6 +1,8 @@
 // @flow
 import { createMuiTheme } from '@material-ui/core';
 
+import { HEADERS_HEIGHT } from './containers/Layout/Header';
+
 const theme = createMuiTheme({
     palette: {
         primary: {
@@ -29,6 +31,9 @@ const theme = createMuiTheme({
             margin: '0 0 0 2em',
             lineHeight: '22px'
         }
+    },
+    header: {
+        height: HEADERS_HEIGHT
     }
 });
 

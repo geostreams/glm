@@ -9,14 +9,14 @@ module.exports = webpackMerge.merge(commonConfig, {
     devtool: 'source-map',
 
     optimization: {
-        minimize: true,    
+        minimize: true,
         minimizer: [new CssMinimizerPlugin()
         ]
     },
     plugins: [
-            new Webpack.DefinePlugin({
-                'process.env.NODE_ENV': '"production"',
-                'process.env.GEOSTREAMS_URL': JSON.stringify(process.env.GEOSTREAMS_URL || '/geostreams')
-            })
+        new Webpack.DefinePlugin({
+            'process.env.NODE_ENV': '"production"',
+            'process.env.GEOSTREAMS_URL': JSON.stringify(process.env.GEOSTREAMS_URL || '/geostreams')
+        })
     ]
 });
