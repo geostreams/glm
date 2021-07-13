@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
-- Connect the new regions trends and explore views from `geodashboard/@geostreams` package:
+- Connect the new regions trends, explore, and download views from `geodashboard/@geostreams` package:
   [Issue-5](https://github.com/geostreams/glm/issues/5)
 
 ## [3.7.0] - 2021-06-01
