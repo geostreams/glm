@@ -1,6 +1,7 @@
 export default {
     map: {
         geoserverUrl: process.env.GEOSERVER_URL,
+        mapTileURL: 'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
         zoom: 6,
         center: [-9397690.175308002, 5582164.274953878],
         clusterExpandCountThreshold: 10,
